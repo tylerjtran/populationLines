@@ -2,7 +2,7 @@ library(dplyr); library(ggplot2); library(tidyverse); library(tidycensus); libra
 library(reshape)
 
 
-census_api_key("") # get an API key from api.census.gov/data/key_signup.html
+census_api_key(Sys.getenv('census_api')) # get an API key from api.census.gov/data/key_signup.html
 
 # v17 <- load_variables(2010, "sf1", cache = TRUE)
 # View(v17)
